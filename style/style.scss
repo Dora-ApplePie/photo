@@ -1,0 +1,28 @@
+$dark: #22222b;
+$light: #faf9fe;
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.main{
+  background-image: url(../img/bg.jpg);
+}
+
+.header{
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav{
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  
+}
