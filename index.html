@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Polina Dudareva</title>
+    <link rel="icon" href="/photo/img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/photo/img/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
@@ -11,7 +13,7 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <section class="main">
+    <section class="main" id="home">
       <header>
         <div class="header">
           <div class="logo">
@@ -19,12 +21,12 @@
           </div>
           <nav>
             <ul class="nav">
-              <li class="nav-item"><a  class="nav-link" href="#">Главная</a></li>
-              <li class="nav-item"><a  class="nav-link" href="#">Обо мне</a></li>
-              <li class="nav-item"><a  class="nav-link" href="#">Услуги</a></li>
-              <li class="nav-item"><a  class="nav-link" href="#">Портфолио</a></li>
-              <li class="nav-item"><a  class="nav-link" href="#">Отзывы</a></li>
-              <li class="nav-item"><a  class="nav-link" href="#">Контакты</a></li>
+              <li class="nav-item"><a  class="nav-link" href="#home">Главная</a></li>
+              <li class="nav-item"><a  class="nav-link" href="#about">Обо мне</a></li>
+              <li class="nav-item"><a  class="nav-link" href="#service">Услуги</a></li>
+              <li class="nav-item"><a  class="nav-link" href="#portfolio">Портфолио</a></li>
+              <li class="nav-item"><a  class="nav-link" href="#feedback">Отзывы</a></li>
+              <li class="nav-item"><a  class="nav-link" href="#form">Контакты</a></li>
             </ul>
           </nav>
           </nav>
@@ -35,7 +37,7 @@
       </div>
       <button class="btn-scroll"><img src="img/scroll-icon.png" alt="Scroll"></button>
     </section>
-    <section class="section-about">
+    <section class="section-about" id="about">
       <div class="wrapper">
         <div class="box-about">
          <div class="box-about-item">
@@ -67,7 +69,7 @@
         </div>
       </div>
     </section>
-    <section class="section-service">
+    <section class="section-service" id="service">
       <div class="wrapper">
         <h2 class="title-h2 text-center">Мои услуги</h2>
         <p class="after-title text-center">Просмотрите все оказываемые мной услуги и подумайте что бы вы хотели</p>
@@ -111,10 +113,10 @@
         </div> 
       </div>
     </section>
-    <section class="section-portfolio">
+    <section class="section-portfolio" id="portfolio">
       <div class="wrapper">
         <h2 class="title-h2 text-center">Мое портфолио</h2>
-        <p class="after-title text-center">Здесь немного моих работ, которые я сделала для великолепных людей</p>
+        <p class="after-title text-center">Здесь примеры моих работ, которые я сделала для великолепных людей</p>
         <div class="portfolio">
           <div class="portfolio-item portfolio-01">
             <div class="portfolio-thumb">
@@ -156,7 +158,7 @@
         <a href="#" class="btn">Связаться со мной</a>
       </div>
     </section>
-    <section class="section-feedback">
+    <section class="section-feedback" id="feedback">
       <div class="wrapper">
         <h2 class="title-h2 text-center">Отзывы</h2>
         <p class="after-title text-center">Посмотрите, что люди говорят обо мне и моих работах</p>
@@ -224,14 +226,20 @@
     </section>
     <section class="section-form">
       <div class="wrapper">
-        <h2 class="title-h2 text-center">Связаться со мной</h2>
+        <h2 class="title-h2 text-center" id="form">Связаться со мной</h2>
         <p class="after-title text-center">У вас возникли вопросы или появились предложения? Срочно свяжитесь со мной</p>
-        <form class="form" action="">
-          <input class="form__input" type="text" placeholder="Введите ваше имя">
-          <input class="form__input" type="text" placeholder="Введите ваш Email">
-          <textarea class="form__textarea" name="" placeholder="Ваше сообщение"></textarea>
-          <button type="submit" class="btn">Отправить сообщение</button>
-       </form>
+          <div class="form-container">
+            <div class="note">
+              <div class="fields">
+                <form class="form" action="">
+                  <input class="form__input" type="text" name="name" placeholder="Введите ваше имя">
+                  <input class="form__input" type="email" name="email" placeholder="Введите ваш Email">
+                  <textarea class="form__textarea" name="message" placeholder="Ваше сообщение"></textarea>
+                  <input type="submit" name="submit" class="form-container__btn btn" value="Отправить сообщение">
+                </form>
+               </div>
+            </div>
+          </div>
       </div>
     </section>
     <footer>
@@ -246,5 +254,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="contactform.js"></script>
   </body>
 </html>
