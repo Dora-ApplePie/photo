@@ -27,8 +27,7 @@ body{
   padding-top: 38px;
   padding-bottom: 40px ;
   background-image: url(../img/bg.jpg);
-  background-position: center;
-  background-repeat:no-repeat;
+  background-position:center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -69,6 +68,29 @@ body{
   font-size: 60px;
   text-align: center;
   font-weight: 300;
+  position: relative;
+  &::before{
+    content:'';
+    width:30px;
+    height: 23px;
+    position: absolute;
+    left: -30px;
+    bottom: 55px;
+    background-color: transparent;
+    border-left: 1px solid $dark;
+    border-top: 1px solid $dark;
+  }
+  &::after{
+    content:'';
+    width:30px;
+    height: 23px;
+    position: absolute;
+    left: 505px;
+    bottom: -7px;
+    background-color: transparent;
+    border-right: 1px solid $dark;
+    border-bottom: 1px solid $dark;
+  }
   span{
     font-weight: 500;
   }
