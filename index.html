@@ -226,14 +226,23 @@
     </section>
     <section class="section-form">
       <div class="wrapper">
-        <h2 class="title-h2 text-center" id="form">Связаться со мной</h2>
+        <h2 class="title-h2 text-center contact-form__title" id="form">Связаться со мной</h2>
         <p class="after-title text-center">У вас возникли вопросы или появились предложения? Срочно свяжитесь со мной</p>
-          <div class="form-container">
-                <form class="form" action="#">
-                  <input class="form__input" type="text" name="name" placeholder="Введите ваше имя">
-                  <input class="form__input" type="email" name="email" placeholder="Введите ваш Email">
-                  <textarea class="form__textarea" name="message" placeholder="Ваше сообщение"></textarea>
-                  <input type="submit" name="submit" class="btn" value="Отправить сообщение">
+          <div class="form-container form-wrapper">
+                <form class="contact-form form" id="contact-form_1" method="POST" enctype="multipart/form-data">
+                <p class="contact-form__description"></p>
+                <div class="contact-form__input-wrapper">
+                  <input class="form__input contact-form__input contact-form__input_name" type="text" name="name" placeholder="Введите ваше имя">
+                  <div class="contact-form__error contact-form__error_name"></div>
+                </div>
+                <div class="contact-form__input-wrapper">
+                  <input class="form__input contact-form__input contact-form__input_tel" type="tel" name="tel" placeholder="Введите телефон">
+                  <div class="contact-form__error contact-form__error_tel"></div>
+                </div>
+                <div class="contact-form__input-wrapper"> 
+                  <input class="form__textarea contact-form__input contact-form__input_email" type="email" name="email" placeholder="Ввведите ваш email">
+                </div>
+                  <button type="submit" name="submit"  class=" btn contact-form__button">Отправить сообщение</button>
                 </form>
                </div>
             </div>
@@ -250,5 +259,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/mail/js/mail.js"></script>
   </body>
 </html>
